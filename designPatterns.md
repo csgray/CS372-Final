@@ -6,6 +6,17 @@ A selection of design patterns that were covered in CS 372: Software Constructio
 
 [Source Making - Design Patterns](https://sourcemaking.com/design_patterns)
 
+## Adapter
+**Intent:** Change the interface of one class into the interface that clients expect to use.
+
+**Problem:** A valuable module's interface is incompatible with the existing system.
+
+**Applicability:** Use when it is possible to convert the client's outputs to the module's inputs through a wrapper.
+
+**Structure:** Client's call the methods on the wrapper class which then calls the original module.
+
+**Consequences:** It is possible to retrofit old or external modules to work with existing systems.
+
 ## Chain of Responsibility
 **Intent:** Create a chain of receivers then pass requests along the chain until an object handles it.
 
@@ -29,26 +40,37 @@ A selection of design patterns that were covered in CS 372: Software Constructio
 **Consequences:** Requests may be passed between clients and receivers independent of interface and time.
 
 ## Composite
-**Intent:**
+**Intent:** Create a tree of composite and component objects with a uniform interface.
 
-**Problem:** 
+**Problem:** There is a hierarchy of different objects where managing each object differently would be burdensome.
 
-**Applicability:**
+**Applicability:** Use when container objects may contain other containers.
 
-**Structure:**
+**Structure:** Composite objects contain components (child objects) which could be other composite objects with their own children.
 
-**Consequences:**
+**Consequences:** Each object in the hierarchy has a uniform interface, but some functions are pushed to the abstract class when they normally would not be.
 
 ## Decorator
-**Intent:**
+**Intent:** Add optional features to an object at run-time.
 
-**Problem:** 
+**Problem:** Need to add functionality to an object without using inheritence.
 
-**Applicability:**
+**Applicability:** Use when additional functionality can be achieved without modifying the interface.
 
-**Structure:**
+**Structure:** An optional wrapper class with a common supertype adds features to the original object.
 
-**Consequences:**
+**Consequences:** Core functionality and additional features coexist without a new subclass, but you cannot access the original object directly.
+
+## Facade
+**Intent:** Create a new interface for a complex system that is easier or simpler to use.
+
+**Problem:** Users only need access to part of a complicated interface.
+
+**Applicability:** Use when clients only need access to part of a system or when the system is otherwise too unwieldy to use.
+
+**Structure:** A wrapper class defines the interface between the client and the system.
+
+**Consequences:** A complicated system becomes easier to use, but power users may be locked out of advanced features.
 
 ## Interpreter
 **Intent:** Implement a language's grammar as an Abstract Syntax Tree.
@@ -73,15 +95,19 @@ A selection of design patterns that were covered in CS 372: Software Constructio
 **Consequences:** Views into the state of the subject can be created, updated, and deleted as necessary.
 
 ## Proxy
-**Intent:**
+**Intent:** Create one object to stand in for a different one before clients.
 
-**Problem:** 
+**Problem:** An object is too resource-intensive to have constantly available, but other objects do need access to it.
 
 **Applicability:**
+1. An object is too expensive.
+2. An object is too distant.
+3. An object is too sensitive.
+4. Access prompts additional actions.
 
-**Structure:**
+**Structure:** A new interface to the proxy which passes requests to the real object when necessary.
 
-**Consequences:**
+**Consequences:** Clients think they are interact with the real object even when it is not present.
 
 ## State
 **Intent:** Allow an object to alter its behavior, seemingly becoming a different class, when its internal state changes.
@@ -93,6 +119,17 @@ A selection of design patterns that were covered in CS 372: Software Constructio
 **Structure:** Clients interfaces with a "context" class which interfaces with a "state" class from which the different states and their behaviors are derived.
 
 **Consequences:** The different, state-dependent behaviors of an object are presented to clients through a single interface.
+
+## Template
+**Intent:**
+
+**Problem:** 
+
+**Applicability:**
+
+**Structure:**
+
+**Consequences:**
 
 ## Visitor
 **Intent:** Add temporary or unrelated functionality to multiple nodes without modifying those nodes.
