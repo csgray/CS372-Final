@@ -22,6 +22,6 @@ Supertypes and their subtypes should be interchangeable without changing the cor
 Making a client aware of methods that it does not use introduces unnecessary coupling which complicates later changes. Each client should have its own separate interface so that it is only concerned with changes to code that it actually uses.
 
 ## DIP: The Dependency Inversion Principle
-**"Introduce abstract interface to reduce coupling between high and low-level modules."**
+**"Introduce abstract interfaces to reduce coupling between high and low-level modules."**
 
 Traditional software design has high-level modules build on a foundation of low-level modules. This introduces tight coupling and reduces the reusability of code. Putting an abstract interface between different layers reduces coupling and makes it easier to change or reuse code.

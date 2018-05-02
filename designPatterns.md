@@ -120,16 +120,16 @@ A selection of design patterns that were covered in CS 372: Software Constructio
 
 **Consequences:** The different, state-dependent behaviors of an object are presented to clients through a single interface.
 
-## Template
-**Intent:**
+## Template Method
+**Intent:** Reuse an algorithm even when the particulars of some steps change.
 
-**Problem:** 
+**Problem:** Two or more objects are similar but do not share an interface.
 
-**Applicability:**
+**Applicability:** Use when an object or process can be broken down into a series of discrete steps and only a few of the steps change between instances.
 
-**Structure:**
+**Structure:** The common steps (methods) of the algorithm are implemented in an abstract base class and the subclasses implement the customizable steps.
 
-**Consequences:**
+**Consequences:** Significant sections of code are reused with the base class calling the subclasses.
 
 ## Visitor
 **Intent:** Add temporary or unrelated functionality to multiple nodes without modifying those nodes.
