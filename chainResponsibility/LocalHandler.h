@@ -19,7 +19,7 @@ private:
 public:
 	LocalHandler(int, std::string);
 
-	void routeMail(Letter);
+	void routeMail(Letter &);
 };
 
 #endif // #ifndef FILE_LOCALHANDLER_H_INCLUDED

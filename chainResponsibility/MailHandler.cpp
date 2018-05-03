@@ -28,7 +28,7 @@ void MailHandler::addHandler(std::shared_ptr<MailHandler> handler) {
 // routeMail
 // Takes a Letter struct.
 // Passes the Letter down the chain until a MailHandler handles it or it reaches the end.
-void MailHandler::routeMail(Letter letter) {
+void MailHandler::routeMail(Letter &letter) {
 	if (nextHandler)
 		nextHandler->routeMail(letter);
 	else

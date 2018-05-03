@@ -30,7 +30,7 @@ public:
 
 	void addHandler(std::shared_ptr<MailHandler>);
 
-	virtual void routeMail(Letter);
+	virtual void routeMail(Letter &);
 };
 
 #endif // #ifndef FILE_MAILHANDLER_H_INCLUDED
