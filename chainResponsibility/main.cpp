@@ -13,7 +13,7 @@ int main() {
 	auto handlerWainwright = LocalHandler(99703, "Fort Wainwright");
 	auto handlerUAF = LocalHandler(99775, "UAF");
 
-	// Chain the LocalHandlers together by adding them to a route node
+	// Chain the LocalHandlers together by adding them to a root node
 	handlerFairbanks.addHandler(std::make_shared<LocalHandler>(handlerNorthPole));
 	handlerFairbanks.addHandler(std::make_shared<LocalHandler>(handlerDowntown));
 	handlerFairbanks.addHandler(std::make_shared<LocalHandler>(handlerWainwright));
